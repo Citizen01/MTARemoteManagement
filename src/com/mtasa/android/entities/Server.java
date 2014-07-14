@@ -11,12 +11,14 @@ public class Server {
 	private String gamemode;
 	private String version;
 
+	private boolean isOnline;
+
 	public Server() {
 
 	}
 
 	public Server(int id, String name, String ip, int port, String password,
-			int playerCount, String gamemode, String version) {
+			int playerCount, int maxPlayers, String gamemode, String version) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -24,6 +26,7 @@ public class Server {
 		this.port = port;
 		this.password = password;
 		this.playerCount = playerCount;
+		this.maxPlayers = maxPlayers;
 		this.gamemode = gamemode;
 		this.version = version;
 	}
@@ -79,7 +82,7 @@ public class Server {
 	}
 
 	public int getMaxPlayers() {
-		return maxPlayers;
+		return this.maxPlayers;
 	}
 
 	public void setMaxPlayers(int maxPlayers) {
@@ -100,6 +103,20 @@ public class Server {
 
 	public void setVersion(String version) {
 		this.version = version;
+	}
+
+	public boolean isOnline() {
+		return this.isOnline;
+	}
+
+	public void setOnline(boolean isOnline) {
+		this.isOnline = isOnline;
+	}
+
+	public String getFullIp() {
+		String ip = this.ip != null ? this.ip : "Unknown";
+		String port = this.port > 0 ? String.valueOf(this.port) : "Unknown";
+		return ip + ":" + port;
 	}
 
 }
