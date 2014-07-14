@@ -7,6 +7,7 @@ public class Server {
 	private int port;
 	private String password;
 	private int playerCount;
+	private int maxPlayers;
 	private String gamemode;
 	private String version;
 
@@ -75,6 +76,14 @@ public class Server {
 
 	public void setPlayerCount(int playerCount) {
 		this.playerCount = playerCount;
+	}
+
+	public int getMaxPlayers() {
+		return maxPlayers;
+	}
+
+	public void setMaxPlayers(int maxPlayers) {
+		this.maxPlayers = maxPlayers;
 	}
 
 	public String getGamemode() {
