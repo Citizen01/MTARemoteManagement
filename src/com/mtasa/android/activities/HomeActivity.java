@@ -1,20 +1,12 @@
 package com.mtasa.android.activities;
 
-import com.mtasa.android.R;
-import com.mtasa.android.R.id;
-import com.mtasa.android.R.layout;
-import com.mtasa.android.R.menu;
-
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
+
+import com.mtasa.android.R;
+import com.mtasa.android.fragments.HomeFragment;
 
 public class HomeActivity extends ActionBarActivity {
 
@@ -25,8 +17,14 @@ public class HomeActivity extends ActionBarActivity {
 
 		if (savedInstanceState == null) {
 			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
+			.add(R.id.container, new HomeFragment()).commit();
 		}
+
+		bindView();
+	}
+
+	private void bindView() {
+
 	}
 
 	@Override
@@ -47,23 +45,6 @@ public class HomeActivity extends ActionBarActivity {
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
-	}
-
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_home, container,
-					false);
-			return rootView;
-		}
 	}
 
 }
