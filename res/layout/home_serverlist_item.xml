@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="HardcodedText" >
+
+    <TextView
+        android:id="@+id/serverlist_item_name_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/serverlist_item_logo"
+        android:layout_toRightOf="@+id/serverlist_item_logo"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="My awesome server with extras in the name hmm maybe too much"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/serverlist_item_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/mta_logo"
+        android:src="@drawable/ic_multi_theft_auto_logo" />
+
+    <TextView
+        android:id="@+id/serverlist_item_ip_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/serverlist_item_name_value"
+        android:layout_below="@+id/serverlist_item_name_value"
+        android:layout_marginRight="5dp"
+        android:text="IP:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/serverlist_item_ip_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/serverlist_item_ip_label"
+        android:layout_alignBottom="@+id/serverlist_item_ip_label"
+        android:layout_toRightOf="@+id/serverlist_item_ip_label"
+        android:text="178.178.178.178:22003"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/serverlist_item_status_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/serverlist_item_ip_value"
+        android:layout_alignBottom="@+id/serverlist_item_ip_value"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="Online"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/serverlist_item_status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/serverlist_item_status_value"
+        android:layout_alignBottom="@+id/serverlist_item_status_value"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/serverlist_item_status_value"
+        android:text="Status:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/serverlist_item_players_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/serverlist_item_name_value"
+        android:layout_below="@+id/serverlist_item_ip_label"
+        android:layout_marginRight="5dp"
+        android:text="Players:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/serverlist_item_players_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/serverlist_item_players_label"
+        android:layout_alignBottom="@+id/serverlist_item_players_label"
+        android:layout_toRightOf="@+id/serverlist_item_players_label"
+        android:text="233/1024"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/serverlist_item_gamemode_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/serverlist_item_players_label"
+        android:layout_alignBottom="@+id/serverlist_item_players_label"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:text="race"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/serverlist_item_gamemode_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/serverlist_item_players_label"
+        android:layout_alignBottom="@+id/serverlist_item_players_label"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/serverlist_item_gamemode_value"
+        android:text="Gamemode:"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold" />
+
+</RelativeLayout>
